@@ -99,3 +99,33 @@ if (document.location.search === '?mail_status=error') {
 	}, 3000)
 }
 //========================================================================================================================================
+const navMobile = document.querySelector('.wrap')
+const barsBtn = document.querySelector('.hamburger')
+const navLinks = document.querySelectorAll('.link')
+
+const handleNav = () => {
+	barsBtn.classList.toggle('is-active')
+
+	navMobile.classList.toggle('none')
+	// navMobile.classList.toggle('wrap-block')
+
+	// document.body.classList.toggle('sticky-body')
+}
+// const closeNav = () => {
+// 	navMobile.classList.add('none')
+// }
+navLinks.forEach(item =>
+	item.addEventListener('click', () => {
+		navMobile.classList.add('none')
+		barsBtn.classList.remove('is-active')
+	})
+)
+// const removeStickyBody = () => {
+// 	document.body.classList.remove('sticky-body')
+// 	navMobile.classList.remove('wrap-block')
+// 	navMobile.classList.add('none')
+// 	navBtn.classList.remove('is-active')
+// }
+barsBtn.addEventListener('click', handleNav)
+// navMobile.addEventListener('click', removeStickyBody)
+// navLinks.addEventListener('click', closeNav)

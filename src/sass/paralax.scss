@@ -68,48 +68,149 @@ nav ul a {
 	font-weight: 400;
 	font-size: 3rem;
 }
-
-.hamburger {
+.nav-mobile {
 	display: none;
-	padding-left: 1.5rem;
 }
-.hamburger a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0;
-	width: 37px;
-	height: 37px;
-	border-radius: 50%;
-	background-color: rgb(0, 0, 0);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+
+.hamburger:hover + .wrap,
+.wrap:hover {
+	transform: scale(0.8) translateZ(0px);
+	opacity: 1;
 }
-.hamburger .bar {
-	position: relative;
-	width: 52%;
-	height: 1.3px;
-	background-color: rgb(67, 186, 255);
-	// background-color: #fff;
-	border-radius: 1px;
+// ta linijka zakomentowana dla ciekawego efektu przy kliknięciu
+// .burger:hover + .wrap a,
+.wrap:hover a {
+	transform: scale(1) translateZ(0px);
 }
-.hamburger .bar::before,
-.hamburger .bar::after {
-	content: '';
+a:hover div {
+	opacity: 1;
+	transform: translateZ(0px);
+}
+.wrap {
+	width: 100vmin;
+	height: 100vmin;
+
+	// width: 100%;height: 100%;
+	background: inherit;
+	// background-image: url('/dist/img/bg/_c056dc35-2977-49f7-a0a6-a14f4b2ae538.jpeg');
+	transform: scale(0.2) translateZ(0px);
+	opacity: 0.7;
+	transition: transform 0.5s, opacity 0.5s;
+	margin: 0 auto;
+}
+a {
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 60%;
+	width: 47.5%;
+	height: 47.5%;
+	transform: scale(0.5) translateZ(0px);
+}
+a div {
 	height: 100%;
-	background-color: inherit;
-	border-radius: 2px;
+	background-size: cover;
+	opacity: 0.4;
+	transition: opacity 0.5s;
+	border-radius: inherit;
 }
-.hamburger .bar::before {
-	top: -4.5px;
+/* //============================================================================================ */
+a:nth-child(1) {
+	border-radius: 40vmin 0 0 0;
+	transform-origin: 110% 110%;
+	transition: transform 0.4s 0.15s;
 }
-.hamburger .bar::after {
-	top: 4.5px;
+a:nth-child(1) div {
+	background-image: url('/dist/img/bg/backgrounds-8436628_1920.jpg');
 }
+/* ====================================================================================================== */
+a:nth-child(2) {
+	border-radius: 0 40vmin 0 0;
+	left: 52.5%;
+	transform-origin: -10% 110%;
+	transition: transform 0.4s 0.2s;
+}
+a:nth-child(2) div {
+	background-image: url('/dist/img/bg/backgrounds-8436628_640.jpg');
+}
+/* =================================================================================================== */
+a:nth-child(3) {
+	border-radius: 0 0 0 40vmin;
+	top: 52.5%;
+	transform-origin: 110% -10%;
+	transition: transform 0.4s 0.25s;
+}
+a:nth-child(3) div {
+	background-image: url('/dist/img/bg/circle-3041437.jpg');
+}
+/* ================================================================================================== */
+a:nth-child(4) {
+	border-radius: 0 0 40vmin 0;
+	top: 52.5%;
+	left: 52.5%;
+	transform-origin: -10% -10%;
+	transition: transform 0.4s 0.3s;
+}
+a:nth-child(4) div {
+	background-image: url('/dist/img/bg/backgrounds-8436687_1280.jpg');
+}
+
+a:nth-child(5) {
+	border-radius: 50vmin;
+	width: 55%;
+	height: 55%;
+	top: 22.5%;
+	left: 22.5%;
+	transform-origin: -10% -10%;
+	transform: scale(1);
+	box-shadow: 0 0 0 5vmin #e3dfd2;
+}
+a:nth-child(5) div {
+	background-image: url('/dist/img/bg/drawing-6859616_1280.png');
+}
+// .burger {
+// 	display: none;
+// 	padding-left: 1.5rem;
+// }
+// .hamburger {
+// 	display: none;
+// 	padding-left: 1.5rem;
+// }
+// .hamburger .burger {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	padding: 0;
+// 	width: 37px;
+// 	height: 37px;
+// 	border-radius: 50%;
+// 	background-color: rgb(0, 0, 0);
+// 	backdrop-filter: blur(10px);
+// 	-webkit-backdrop-filter: blur(10px);
+// }
+// .hamburger .bar {
+// 	position: relative;
+// 	width: 52%;
+// 	height: 1.3px;
+// 	background-color: rgb(67, 186, 255);
+// 	// background-color: #fff;
+// 	border-radius: 1px;
+// }
+// .hamburger .bar::before,
+// .hamburger .bar::after {
+// 	content: '';
+// 	position: absolute;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	width: 60%;
+// 	height: 100%;
+// 	background-color: inherit;
+// 	border-radius: 2px;
+// }
+// .hamburger .bar::before {
+// 	top: -4.5px;
+// }
+// .hamburger .bar::after {
+// 	top: 4.5px;
+// }
+// ======================================================================================================
 
 //oczojebne efekty===================================================================
 .parallax {
@@ -694,14 +795,21 @@ section {
 		color: white;
 	}
 }
-
+@media (min-width: 726px) {
+	.hamburger {
+		display: none;
+	}
+	.wrap {
+		display: none;
+	}
+}
 @media (max-width: 725px) {
 	.nav-link {
 		display: none;
 	}
-	.hamburger {
-		display: flex;
-	}
+
+	//============================================================================================================================================================================
+
 	.item-two {
 		// overflow: hidden;
 		width: initial + 40%;
@@ -751,17 +859,6 @@ section {
 	// }
 	.text {
 		z-index: 5;
-		// color: white;
-		// top: 50%;
-		// left: 50%;
-		// text-align: right;
-		// color: transparent;
-		// -webkit-text-stroke: 1px white;
-		// -webkit-text-stroke: 1px rgb(67, 186, 255);
-		// -webkit-text-stroke: 1px rgb(255, 251, 0);
-		// -webkit-text-stroke: 1px rgb(49, 103, 250);
-		// -webkit-text-stroke: 1px rgb(0, 26, 255);
-		// mix-blend-mode: difference;
 
 		h1 {
 			font-size: 6rem;
@@ -849,5 +946,14 @@ section {
 				}
 			}
 		}
+	}
+	.none {
+		display: none;
+	}
+	.wrap-block {
+		display: block;
+	}
+	.sticky-body {
+		overflow: hidden;
 	}
 }
