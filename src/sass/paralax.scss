@@ -16,13 +16,16 @@ body {
 	font-weight: 800;
 	font-feature-settings: 'pnum' on, 'lnum' on;
 }
+::selection {
+	background-color: #0b372dbb;
+}
 
 //nav======================================================================================================================================
 .logo {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	// margin-right: auto;
 	img {
 		width: 50px;
 		animation: rotate-left 25s infinite linear;
@@ -71,145 +74,154 @@ nav ul a {
 .nav-mobile {
 	display: none;
 }
-
-.hamburger:hover + .wrap,
-.wrap:hover {
-	transform: scale(0.8) translateZ(0px);
-	opacity: 1;
-}
-// ta linijka zakomentowana dla ciekawego efektu przy kliknięciu
-// .burger:hover + .wrap a,
-.wrap:hover a {
-	transform: scale(1) translateZ(0px);
-}
-a:hover div {
-	opacity: 1;
-	transform: translateZ(0px);
-}
-.wrap {
-	width: 100vmin;
-	height: 100vmin;
-
-	// width: 100%;height: 100%;
-	background: inherit;
-	// background-image: url('/dist/img/bg/_c056dc35-2977-49f7-a0a6-a14f4b2ae538.jpeg');
-	transform: scale(0.2) translateZ(0px);
-	opacity: 0.7;
-	transition: transform 0.5s, opacity 0.5s;
-	margin: 0 auto;
-}
-a {
-	position: absolute;
-	width: 47.5%;
-	height: 47.5%;
-	transform: scale(0.5) translateZ(0px);
-}
-a div {
+.mobile-nav-box {
+	width: 100%;
 	height: 100%;
-	background-size: cover;
-	opacity: 0.4;
-	transition: opacity 0.5s;
-	border-radius: inherit;
-}
-/* //============================================================================================ */
-a:nth-child(1) {
-	border-radius: 40vmin 0 0 0;
-	transform-origin: 110% 110%;
-	transition: transform 0.4s 0.15s;
-}
-a:nth-child(1) div {
-	background-image: url('/dist/img/bg/backgrounds-8436628_1920.jpg');
-}
-/* ====================================================================================================== */
-a:nth-child(2) {
-	border-radius: 0 40vmin 0 0;
-	left: 52.5%;
-	transform-origin: -10% 110%;
-	transition: transform 0.4s 0.2s;
-}
-a:nth-child(2) div {
-	background-image: url('/dist/img/bg/backgrounds-8436628_640.jpg');
-}
-/* =================================================================================================== */
-a:nth-child(3) {
-	border-radius: 0 0 0 40vmin;
-	top: 52.5%;
-	transform-origin: 110% -10%;
-	transition: transform 0.4s 0.25s;
-}
-a:nth-child(3) div {
-	background-image: url('/dist/img/bg/circle-3041437.jpg');
-}
-/* ================================================================================================== */
-a:nth-child(4) {
-	border-radius: 0 0 40vmin 0;
-	top: 52.5%;
-	left: 52.5%;
-	transform-origin: -10% -10%;
-	transition: transform 0.4s 0.3s;
-}
-a:nth-child(4) div {
-	background-image: url('/dist/img/bg/backgrounds-8436687_1280.jpg');
-}
+	// background-image: url('/dist/img/bg/gear-wheel-7163767_640.png');
+	// background-size: cover;
+	// background-position: center;
+	// .hamburger:hover + .wrap,
+	.wrap:hover {
+		transform: scale(1) translateZ(0px);
+		opacity: 1;
+	}
+	// ta linijka zakomentowana dla ciekawego efektu przy kliknięciu
+	// .hamburger:hover + .wrap a,
+	.wrap:hover a {
+		transform: scale(1) translateZ(0px);
+	}
+	a:hover div {
+		opacity: 1;
+		// opacity: 0;
+		transform: translateZ(0px);
+	}
 
-a:nth-child(5) {
-	border-radius: 50vmin;
-	width: 55%;
-	height: 55%;
-	top: 22.5%;
-	left: 22.5%;
-	transform-origin: -10% -10%;
-	transform: scale(1);
-	box-shadow: 0 0 0 5vmin #e3dfd2;
+	.wrap {
+		width: 100vmin;
+		height: 100vmin;
+		// position: relative;
+
+		// width: 100%;height: 100%;
+		background: inherit;
+		// background-image: url('/dist/img/bg/_c056dc35-2977-49f7-a0a6-a14f4b2ae538.jpeg');
+		transform: scale(0.6) translateZ(0px);
+		// opacity: 0.7;
+		opacity: 1;
+		transition: transform 0.5s, opacity 0.5s;
+		margin: 0 auto;
+	}
+	a {
+		position: absolute;
+		width: 47.5%;
+		height: 47.5%;
+		transform: scale(0.5) translateZ(0px);
+	}
+
+	a div {
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		opacity: 0.4;
+		// opacity: 1;
+		// opacity: 0;
+		transition: opacity 0.5s;
+		border-radius: inherit;
+	}
+	a p {
+		opacity: 1;
+		position: absolute;
+		font-size: 2rem;
+		color: black;
+		// color: rgb(67, 186, 255);
+		// -webkit-text-stroke: 1px rgb(67, 186, 255);
+		-webkit-text-stroke: 1px black;
+	}
+
+	/* //============================================================================================ */
+	a:nth-child(1) {
+		// border-radius: 40vmin 0 0 0;
+		transform-origin: 110% 110%;
+		transition: transform 0.4s 0.15s;
+	}
+	a:nth-child(1) div {
+		background-image: url('/dist/img/bg/backgrounds-8436628_1920.jpg');
+	}
+	a:nth-child(1) p {
+		top: 10%;
+		left: 10%;
+	}
+	/* ====================================================================================================== */
+	a:nth-child(2) {
+		// border-radius: 0 40vmin 0 0;
+		left: 52.5%;
+		transform-origin: -10% 110%;
+		transition: transform 0.4s 0.2s;
+	}
+	a:nth-child(2) div {
+		background-image: url('/dist/img/bg/drawing-6859616_640.png');
+	}
+	a:nth-child(2) p {
+		top: 10%;
+		right: 10%;
+	}
+	/* =================================================================================================== */
+	a:nth-child(3) {
+		// border-radius: 0 0 0 40vmin;
+		top: 52.5%;
+		transform-origin: 110% -10%;
+		transition: transform 0.4s 0.25s;
+	}
+	a:nth-child(3) div {
+		background-image: url('/dist/img/bg/circle-3041437.jpg');
+	}
+	a:nth-child(3) p {
+		bottom: 10%;
+		left: 10%;
+	}
+	/* ================================================================================================== */
+	a:nth-child(4) {
+		// border-radius: 0 0 40vmin 0;
+		top: 52.5%;
+		left: 52.5%;
+		transform-origin: -10% -10%;
+		transition: transform 0.4s 0.3s;
+	}
+	a:nth-child(4) div {
+		background-image: url('/dist/img/bg/backgrounds-8436687_1280.jpg');
+	}
+	a:nth-child(4) p {
+		bottom: 10%;
+		right: 10%;
+	}
+	// ==================================================================================================
+	a:nth-child(5) {
+		border-radius: 50vmin;
+		width: 55%;
+		height: 55%;
+		top: 22.5%;
+		left: 22.5%;
+		transform-origin: -10% -10%;
+		transform: scale(1);
+		box-shadow: 0 0 0 6vmin black;
+		box-shadow: 0 0 0 6vmin rgb(67, 186, 255);
+		// opacity: 0.1;
+		// z-index: -1;
+	}
+	a:nth-child(5) div {
+		background-image: url('/dist/img/bg/biometrics-4503187_640.jpg');
+		// background-image: url('/dist/img/bg/gear-wheel-7163767_640.png');
+		// background: #000;
+		// border: 1px solid red;
+		opacity: 1;
+		// animation: rotate-left 55s infinite;
+	}
+	// a:nth-child(5):hover {
+	// 	z-index: -1;
+	// }
+	// .circle-back {
+	// 	z-index: -1;
+	// }
 }
-a:nth-child(5) div {
-	background-image: url('/dist/img/bg/drawing-6859616_1280.png');
-}
-// .burger {
-// 	display: none;
-// 	padding-left: 1.5rem;
-// }
-// .hamburger {
-// 	display: none;
-// 	padding-left: 1.5rem;
-// }
-// .hamburger .burger {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	padding: 0;
-// 	width: 37px;
-// 	height: 37px;
-// 	border-radius: 50%;
-// 	background-color: rgb(0, 0, 0);
-// 	backdrop-filter: blur(10px);
-// 	-webkit-backdrop-filter: blur(10px);
-// }
-// .hamburger .bar {
-// 	position: relative;
-// 	width: 52%;
-// 	height: 1.3px;
-// 	background-color: rgb(67, 186, 255);
-// 	// background-color: #fff;
-// 	border-radius: 1px;
-// }
-// .hamburger .bar::before,
-// .hamburger .bar::after {
-// 	content: '';
-// 	position: absolute;
-// 	left: 50%;
-// 	transform: translateX(-50%);
-// 	width: 60%;
-// 	height: 100%;
-// 	background-color: inherit;
-// 	border-radius: 2px;
-// }
-// .hamburger .bar::before {
-// 	top: -4.5px;
-// }
-// .hamburger .bar::after {
-// 	top: 4.5px;
-// }
 // ======================================================================================================
 
 //oczojebne efekty===================================================================
@@ -287,25 +299,11 @@ a:nth-child(5) div {
 // }
 .text {
 	z-index: 6;
-	// color: white;
 	top: 50%;
 	left: 50%;
 	text-align: right;
-	// color: white;
-	// color: rgb(67, 186, 255);
-	// color: red;
-	// color: transparent;
-	// -webkit-text-stroke: 1px white;
-	// -webkit-text-stroke: 1px gold;
-	// -webkit-text-stroke: 1px orange;
-	// -webkit-text-stroke: 1px orangered;
 	-webkit-text-stroke: 1px rgb(67, 186, 255);
-	// -webkit-text-stroke: 1px white;
 	-webkit-text-stroke: 1px red;
-	// -webkit-text-stroke: 1px rgb(255, 251, 0);
-	// -webkit-text-stroke: 1px rgb(49, 103, 250);
-	// -webkit-text-stroke: 1px rgb(145, 255, 0);
-	// mix-blend-mode: difference;
 	overflow: hidden;
 
 	h1 {
@@ -741,12 +739,17 @@ section {
 			// min-height: 100vh;
 			// padding: 0 10em;
 			max-width: 600px;
+			// background-image: url('/dist/img/bg/backgrounds-8436687_1280.jpg');
+			// background-size: cover;
+			// background-position: center;
+
 			// margin:0 4em;
 			// margin-left: auto;
 			// overflow-x: hidden;
 			P {
 				&:nth-of-type(n) {
 					color: black;
+					// color: rgb(67, 186, 255);
 					font-weight: 800;
 					-webkit-text-stroke: 1px red;
 				}
@@ -951,9 +954,21 @@ section {
 		display: none;
 	}
 	.wrap-block {
-		display: block;
+		display: flex;
 	}
 	.sticky-body {
 		overflow: hidden;
+	}
+	.nav-mobile-style {
+		display: flex;
+		// flex-wrap: wrap;
+	}
+	.nav-mobile-style-two {
+		margin: 6em 0;
+		// background: #000;
+		// padding: 0;
+		// overflow: hidden;
+		// object-position: center;
+		display: flex;
 	}
 }

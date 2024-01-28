@@ -99,14 +99,20 @@ if (document.location.search === '?mail_status=error') {
 	}, 3000)
 }
 //========================================================================================================================================
-const navMobile = document.querySelector('.wrap')
+const navMobile = document.querySelector('.mobile-nav-box')
+const navBox = document.querySelector('.nav-box')
+// const navMobile = document.querySelector('.wrap')
 const barsBtn = document.querySelector('.hamburger')
 const navLinks = document.querySelectorAll('.link')
+const circleMenu = document.querySelector('.circle-menu')
 
 const handleNav = () => {
 	barsBtn.classList.toggle('is-active')
 
 	navMobile.classList.toggle('none')
+	navMobile.classList.toggle('nav-mobile-style-two')
+	navBox.classList.toggle('nav-mobile-style')
+
 	// navMobile.classList.toggle('wrap-block')
 
 	// document.body.classList.toggle('sticky-body')
@@ -118,8 +124,14 @@ navLinks.forEach(item =>
 	item.addEventListener('click', () => {
 		navMobile.classList.add('none')
 		barsBtn.classList.remove('is-active')
+		navMobile.classList.remove('nav-mobile-style-two')
+		navBox.classList.remove('nav-mobile-style')
+		// circleMenu.classList.remove('circle-back')
 	})
 )
+// const circleGoBack = () => {
+// 	circleMenu.classList.add('circle-back')
+// }
 // const removeStickyBody = () => {
 // 	document.body.classList.remove('sticky-body')
 // 	navMobile.classList.remove('wrap-block')
@@ -129,3 +141,20 @@ navLinks.forEach(item =>
 barsBtn.addEventListener('click', handleNav)
 // navMobile.addEventListener('click', removeStickyBody)
 // navLinks.addEventListener('click', closeNav)
+// circleMenu.addEventListener('click', circleGoBack)
+// const removeZindex = () => {
+// 	circleMenu.classList.remove('circle-back')
+// }
+// window.addEventListener('click',removeZindex)
+// if (circleMenu.classList(contains('circle-back'))) {
+// 	window.addEventListener(
+// 		'click',
+// 		(removeZindex = () => {
+// 			circleMenu.classList.remove('circle-back')
+// 		})
+// 	)
+// }
+// const removeZindex = () => {
+// 	circleMenu.classList.remove('circle-back')
+// }
+// window.addEventListener('click', removeZindex)
