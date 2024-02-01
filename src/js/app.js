@@ -27,11 +27,11 @@ window.addEventListener('mousemove', e => {
 	update(e.clientX)
 })
 
-// if (window.innerWidth >= 725) {
-// 	parallax.style.maxHeight = `${window.innerWidth * 0.6}px`
-// } else {
-// 	parallax.style.maxHeight = `${window.innerWidth * 1.6}px`
-// }
+if (window.innerWidth >= 725) {
+	parallax.style.maxHeight = `${window.innerWidth * 0.6}px`
+} else {
+	parallax.style.maxHeight = `${window.innerWidth * 1.6}px`
+}
 
 // gsap animation
 
@@ -158,3 +158,12 @@ barsBtn.addEventListener('click', handleNav)
 // 	circleMenu.classList.remove('circle-back')
 // }
 // window.addEventListener('click', removeZindex)
+// ======================================================================================
+
+const footerYear = document.querySelector('.footer__year')
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+handleCurrentYear()

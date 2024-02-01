@@ -44,10 +44,10 @@
                     <p>wojtek nowak</p>
                 </div>
                 <ul>
-                    <li class="nav-link"><a href="#about-us">about</a></li>
-                    <li class="nav-link"><a href="#projects">projects</a></li>
-                    <li class="nav-link"><a href="#projects">projects</a></li>
-                    <li class="nav-link"><a href="#contact">contact</a></li>
+                    <li class="nav-link"><a href="#about-us">o mnie</a></li>
+                    <li class="nav-link"><a href="#info">info</a></li>
+                    <li class="nav-link"><a href="#projects">projekty</a></li>
+                    <li class="nav-link"><a href="#contact">kontakt</a></li>
                 </ul>
 
 
@@ -70,37 +70,42 @@
                 <!-- w następnej linijce dodać klase 'none', nav-mobile-style-two dodać w js -->
                 <div class="mobile-nav-box none">
                     <!-- <ul class="wrap">
-                        <li><a href="#about-us" class="link">
+                        <li class="link"><a href="#about-us">
                                 <div>
                                     <p>o mnie</p>
                                 </div>
                             </a></li>
-                        <li><a href="#projects" class="link">
+                        <li class="link"><a href="#projects">
                                 <div>
                                     <p>info</p>
                                 </div>
                             </a></li>
-                        <li><a href="#projects" class="link">
+                        <li class="link"><a href="#projects">
                                 <div>
                                     <p>projecty</p>
                                 </div>
                             </a></li>
-                        <li><a href="#contact" class="link">
+                        <li class="link"><a href="#contact">
                                 <div>
                                     <p>kontakt</p>
                                 </div>
                             </a></li>
-                        <li><a href="#">
+                        <li><a>
                                 <div></div>
                             </a></li>
                     </ul> -->
+
+
+
+
+                    <!-- =============================================================== -->
                     <div class="wrap">
                         <a href="#about-us" class="link">
                             <div>
                             </div>
                             <p>o mnie</p>
                         </a>
-                        <a href="#projects" class="link">
+                        <a href="#info" class="link">
                             <div>
                             </div>
                             <p>info</p>
@@ -116,7 +121,7 @@
                             <p>kontakt</p>
                         </a>
                         <a class="circle-menu">
-                            <!-- <p>click!</p> -->
+                            <p>click!</p>
                             <div>
                             </div>
                         </a>
@@ -130,10 +135,34 @@
 
 
 
+<!-- =============================================================================================================================================================== -->
+
+        <!-- to ponizej pod starsza wersje gsap, dobra, nie chce mi sie -->
+        <!-- vignette przeniesc do diva parallax -->
+        <!-- <div class="vignette hide"></div> -->
+        <!-- <div class="parallax">
+            <img class="parallax-item item-one" src="/dist/img/bg/Remove-bg.ai_1705612208639.png" alt=""
+                data-speedy="0.48" data-speedx="0.666" data-speedz="0" data-rotation="6" data-distance="-200">
+            <video class="parallax-item item-two" src="/dist/img/bg/wireframe_-_26097 (720p).mp4" autoplay="true" loop
+                muted data-speedy="0.305" data-speedx="0.195" data-speedz="0" data-rotation="0.66"
+                data-distance="1100"></video>
+            <img class="parallax-item item-three" src="/dist/img/bg/gear-wheel-7163767_640.png" alt=""
+                data-speedy="0.155" data-speedx="0.125" data-speedz="0.75" data-rotation="-6" data-distance="1700">
+            <img class="parallax-item item-four" src="/dist/img/bg/gear-wheel-7163767_1920.png" alt=""
+                data-speedy="0.31" data-speedx="0.5" data-speedz="2.56" data-rotation="36" data-distance="1800">
+            <img class="parallax-item item-five" src="/dist/img/bg/gear-wheel-7163767_640.png" alt="" data-speedy="0.31"
+                data-speedx="0.5" data-speedz="1.26" data-rotation="-3" data-distance="1800">
+            <div class="text parallax-item" data-speedy="0.07" data-speedx="0.07" data-speedz="1" data-rotation="0.11"
+                data-distance="0">
+                <h2>freelancer</h2>
+                <h1>Wojtek Nowak</h1>
+            </div>
 
 
 
+        </div> -->
 
+<!-- ========================================================================================================================================================================= -->
         <div class="parallax">
             <!-- <div class="vignette hide"></div> -->
             <img class="parallax-item item-one" src="/dist/img/bg/Remove-bg.ai_1705612208639.png" alt=""
@@ -163,7 +192,7 @@
                 <div class="wrapper">
                     <div class="about">
                         <div class="info-title">
-                            <h3 class="section-title">about me</h3>
+                            <h3 class="section-title">o mnie</h3>
                         </div>
                         <div class="about-us-box">
                             <div class="about-us-img"><img src="/dist/img/bg/DSC_0879~5.JPG" alt=""></div>
@@ -187,11 +216,11 @@
 
         </section>
 
-        <section class="projects" id="projects">
+        <section class="projects" id="info">
             <div class="wrapper">
                 <div class="projects-main">
                     <div class="info-title">
-                        <h3 class="section-title">projects</h3>
+                        <h3 class="section-title">info</h3>
                     </div>
                     <div class="projects-img"><img src="/dist/img/bg/drawing-6859616_1920.png" alt=""></div>
                     <div class="projects-box">
@@ -222,11 +251,15 @@
             </div>
 
         </section>
-        <section class="showoff">
+        <section class="showoff" id="projects">
+
             <div class="showoff-bgimg">
                 <img src="/dist/img/bg/Remove-bg.ai_1705612208639.png" alt="">
             </div>
             <div class="wrapper">
+                <div class="info-title">
+                    <h3 class="section-title">projekty</h3>
+                </div>
                 <div class="showoff__boxes">
 
                     <div class="showoff__boxes--box">
@@ -261,9 +294,8 @@
         <section class="contact" id="contact">
             <div class="wrapper">
                 <div class="info-title">
-                    <h3 class="section-title">contact</h3>
+                    <h3 class="section-title">kontakt</h3>
                 </div>
-
                 <div class="contact-section">
                     <div class="form-box">
                         <form action="mail.php" method="post" class="contact-form">
@@ -285,121 +317,24 @@
                         <p class="msg-status"></p>
                     </div>
                     <div class="contact-media">
+
                         <p>wojcieszko666</p>
                         <p>@o2.pl</p>
                         <p>537</p>
                         <p>546</p>
                         <p>782</p>
-
+                        <!-- <div class="showoff-bgimg">
+                            <img src="/dist/img/bg/_e97d0edd-6b5b-43dd-ad26-01c9ed7ba579.jpeg" alt="">
+                        </div> -->
                     </div>
                 </div>
                 <div class="contact-info">
-                    <p>maila podałem, chociaż wolę kontakt telefoniczny...</p>
-                    <p>adres póżniej, jak już dogadamy szczegóły to zapraszam do kuchni. ugotujemy coś razem. ale nie
-                        bigos ;D</p>
+                    <p>szczegóły? zadzwoń, wpadnij na obiad, porozmawiamy...</p>
+                    <p>i ugotujemy coś razem! ale nie bigos ;D</p>
                 </div>
             </div>
         </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
 
 
 
@@ -440,6 +375,12 @@
 
 
     </main>
+    <footer class="footer">
+        <p class="footer__bottom-text">&copy; <span class="footer__year"></span> wojtek nowak</p>
+        <!-- <div class="showoff-bgimg">
+            <img src="/dist/img/bg/gear-wheel-7163767_640.png" alt="">
+        </div> -->
+    </footer>
 
 
 
@@ -470,8 +411,7 @@
 
 
 
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="/src/js/gsap.min.js"></script>
     <script src="/dist/js/app.min.js" defer></script>
 

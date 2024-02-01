@@ -1,0 +1,148 @@
+.mobile-nav-box {
+	width: 100%;
+	height: 100%;
+	// background-image: url('/dist/img/bg/gear-wheel-7163767_640.png');
+	// background-size: cover;
+	// background-position: center;
+	// .hamburger:hover + .wrap,
+	.wrap:hover {
+		transform: scale(1) translateZ(0px);
+		opacity: 1;
+	}
+	// ta linijka zakomentowana dla ciekawego efektu przy kliknięciu
+	// .hamburger:hover + .wrap a,
+	.wrap:hover a {
+		transform: scale(1) translateZ(0px);
+	}
+	a:hover div {
+		opacity: 1;
+		// opacity: 0;
+		transform: translateZ(0px);
+	}
+
+	.wrap {
+		width: 100vmin;
+		height: 100vmin;
+		// position: relative;
+
+		// width: 100%;height: 100%;
+		background: inherit;
+		// background-image: url('/dist/img/bg/_c056dc35-2977-49f7-a0a6-a14f4b2ae538.jpeg');
+		transform: scale(0.6) translateZ(0px);
+		// opacity: 0.7;
+		opacity: 1;
+		transition: transform 0.5s, opacity 0.5s;
+		margin: 0 auto;
+	}
+	a {
+		position: absolute;
+		width: 47.5%;
+		height: 47.5%;
+		transform: scale(0.5) translateZ(0px);
+	}
+
+	a div {
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		opacity: 0.4;
+		// opacity: 1;
+		// opacity: 0;
+		transition: opacity 0.5s;
+		border-radius: inherit;
+	}
+	a p {
+		opacity: 1;
+		position: absolute;
+		font-size: 2rem;
+		color: black;
+		// color: rgb(67, 186, 255);
+		// -webkit-text-stroke: 1px rgb(67, 186, 255);
+		-webkit-text-stroke: 1px black;
+	}
+
+	/* //============================================================================================ */
+	a:nth-child(1) {
+		// border-radius: 40vmin 0 0 0;
+		transform-origin: 110% 110%;
+		transition: transform 0.4s 0.15s;
+	}
+	a:nth-child(1) div {
+		background-image: url('/dist/img/bg/backgrounds-8436628_1920.jpg');
+	}
+	a:nth-child(1) p {
+		top: 10%;
+		left: 10%;
+	}
+	/* ====================================================================================================== */
+	a:nth-child(2) {
+		// border-radius: 0 40vmin 0 0;
+		left: 52.5%;
+		transform-origin: -10% 110%;
+		transition: transform 0.4s 0.2s;
+	}
+	a:nth-child(2) div {
+		background-image: url('/dist/img/bg/drawing-6859616_640.png');
+	}
+	a:nth-child(2) p {
+		top: 10%;
+		right: 10%;
+	}
+	/* =================================================================================================== */
+	a:nth-child(3) {
+		// border-radius: 0 0 0 40vmin;
+		top: 52.5%;
+		transform-origin: 110% -10%;
+		transition: transform 0.4s 0.25s;
+	}
+	a:nth-child(3) div {
+		background-image: url('/dist/img/bg/circle-3041437.jpg');
+	}
+	a:nth-child(3) p {
+		bottom: 10%;
+		left: 10%;
+	}
+	/* ================================================================================================== */
+	a:nth-child(4) {
+		// border-radius: 0 0 40vmin 0;
+		top: 52.5%;
+		left: 52.5%;
+		transform-origin: -10% -10%;
+		transition: transform 0.4s 0.3s;
+	}
+	a:nth-child(4) div {
+		background-image: url('/dist/img/bg/backgrounds-8436687_1280.jpg');
+	}
+	a:nth-child(4) p {
+		bottom: 10%;
+		right: 10%;
+	}
+	// ==================================================================================================
+	a:nth-child(5) {
+		border-radius: 50vmin;
+		width: 55%;
+		height: 55%;
+		top: 22.5%;
+		left: 22.5%;
+		transform-origin: -10% -10%;
+		transform: scale(1);
+		box-shadow: 0 0 0 6vmin black;
+		box-shadow: 0 0 0 6vmin rgb(67, 186, 255);
+		// opacity: 0.1;
+		// z-index: -1;
+	}
+	a:nth-child(5) div {
+		background-image: url('/dist/img/bg/biometrics-4503187_640.jpg');
+		// background-image: url('/dist/img/bg/gear-wheel-7163767_640.png');
+		// background: #000;
+		// border: 1px solid red;
+		opacity: 1;
+		// animation: rotate-left 55s infinite;
+	}
+	// a:nth-child(5):hover {
+	// 	z-index: -1;
+	// }
+	// .circle-back {
+	// 	z-index: -1;
+	// }
+}
